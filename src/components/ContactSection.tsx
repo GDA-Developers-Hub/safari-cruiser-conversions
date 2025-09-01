@@ -6,7 +6,6 @@ import {
   Clock, 
   MessageCircle, 
   Facebook, 
-  Instagram,
   Mail
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -27,7 +26,7 @@ const ContactSection = () => {
       icon: MapPin,
       title: "Visit Us",
       details: ["Mombasa Road", "Nairobi, Kenya"],
-      action: "https://maps.google.com/?q=Mombasa+Road+Nairobi+Kenya"
+      action: "https://maps.google.com/?q=Mombasa+Road+Nairobi+Kenyahttps://www.google.com/maps/place/Pkconversions/data=!4m2!3m1!1s0x0:0xa9b077a77f447bf0?sa=X&ved=1t:2428&ictx=111https://maps.app.goo.gl/Sno1ezm7GBuAen446"
     },
     {
       icon: Clock,
@@ -105,19 +104,10 @@ const ContactSection = () => {
                   size="sm"
                   variant="outline"
                   className="border-safari-brown text-safari-brown hover:bg-safari-brown hover:text-safari-cream"
-                  onClick={() => window.open("https://facebook.com/pkconversion", "_blank")}
+                  onClick={() => window.open("https://www.facebook.com/peter.kamau.754/", "_blank")}
                 >
                   <Facebook className="w-4 h-4 mr-2" />
                   Facebook
-                </Button>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="border-safari-gold text-safari-brown hover:bg-safari-gold hover:text-safari-brown"
-                  onClick={() => window.open("https://instagram.com/pkconversion", "_blank")}
-                >
-                  <Instagram className="w-4 h-4 mr-2" />
-                  Instagram
                 </Button>
               </div>
               

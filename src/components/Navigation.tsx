@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import pkLogo from "@/assets/pk-logo.jpg";
+import pkLogo from "@/assets/pk logo.jpeg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,11 +48,11 @@ const Navigation = () => {
             <img 
               src={pkLogo} 
               alt="PK Conversion Ltd" 
-              className="w-12 h-10 object-contain rounded-md shadow-sm"
+              className="w-12 h-10 object-cover rounded-full shadow-sm border-2 border-safari-gold"
             />
             <div className="ml-3">
-              <h2 className="font-bold text-lg text-foreground">PK Conversion</h2>
-              <p className="text-xs text-safari-gold">Safari Specialists</p>
+              <h2 className={`font-bold text-lg ${isScrolled ? 'text-foreground' : 'text-white'}`}>PK Conversion</h2>
+              <p className={`text-xs ${isScrolled ? 'text-safari-gold' : 'text-white'}`}>Safari Specialists</p>
             </div>
           </div>
 
@@ -62,14 +62,14 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-safari-brown transition-colors font-medium"
+                className={`${isScrolled ? 'text-foreground' : 'text-white'} hover:text-safari-brown transition-colors font-medium`}
               >
                 {item.name}
               </button>
             ))}
             <Button
               size="sm"
-              className="bg-safari-brown hover:bg-safari-brown/90 text-safari-cream"
+              className={`${isScrolled ? 'bg-safari-brown' : 'bg-safari-gold text-safari-brown hover:bg-safari-gold/90'} hover:bg-safari-brown/90 text-safari-cream`}
               onClick={() => window.open("https://wa.me/254705302615", "_blank")}
             >
               <Phone className="mr-2 w-4 h-4" />
@@ -80,7 +80,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground"
+            className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-white'}`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

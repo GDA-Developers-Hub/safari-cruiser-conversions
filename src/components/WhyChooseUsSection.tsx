@@ -43,27 +43,6 @@ const WhyChooseUsSection = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Safari Dreams Ltd",
-      role: "Tour Operator",
-      quote: "PK Conversion transformed our Land Cruisers into the perfect safari vehicles. Our clients love the comfort and visibility.",
-      rating: 5
-    },
-    {
-      name: "Kenya Wildlife Tours",
-      role: "Safari Company", 
-      quote: "Professional service, quality work, and deep understanding of tourism needs. Highly recommended!",
-      rating: 5
-    },
-    {
-      name: "Adventure Kenya",
-      role: "Travel Agency",
-      quote: "The pop-up roof installations are excellent. Our guides and tourists are extremely satisfied.",
-      rating: 5
-    }
-  ];
-
   const achievements = [
     { icon: Trophy, number: "500+", label: "Happy Clients" },
     { icon: CheckCircle, number: "1000+", label: "Successful Conversions" },
@@ -129,43 +108,12 @@ const WhyChooseUsSection = () => {
           ))}
         </motion.div>
 
-        {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
-            What Our <span className="text-safari-green">Clients Say</span>
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6">
-                <CardContent className="p-0">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-safari-gold fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 italic leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-safari-brown">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Final CTA */}
         <motion.div
           className="text-center mt-16 bg-gradient-safari rounded-2xl p-8 md:p-12"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3 className="text-3xl md:text-4xl font-bold mb-4 text-safari-cream">
             Ready to Join Our Success Stories?

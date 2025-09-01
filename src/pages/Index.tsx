@@ -8,6 +8,7 @@ import GallerySection from "@/components/GallerySection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -27,6 +28,7 @@ const Index = () => {
       </main>
       
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

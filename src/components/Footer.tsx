@@ -5,10 +5,9 @@ import {
   MapPin, 
   Mail, 
   Facebook, 
-  Instagram, 
   MessageCircle 
 } from "lucide-react";
-import pkLogo from "@/assets/pk-logo.jpg";
+import pkLogo from "@/assets/pk logo.jpeg";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -47,7 +46,9 @@ const Footer = () => {
               <img 
                 src={pkLogo} 
                 alt="PK Conversion Ltd" 
-                className="w-12 h-10 object-contain rounded-md shadow-sm"
+                width={48}
+                height={40}
+                className="object-contain rounded-md shadow-sm"
               />
               <div className="ml-3">
                 <h3 className="font-bold text-lg text-safari-cream">PK Conversion</h3>
@@ -60,18 +61,12 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <button
-                onClick={() => window.open("https://facebook.com/pkconversion", "_blank")}
+                onClick={() => window.open("https://www.facebook.com/peter.kamau.754/", "_blank")}
                 className="p-2 bg-safari-brown rounded-full hover:bg-safari-brown/80 transition-colors"
               >
                 <Facebook className="w-4 h-4 text-safari-cream" />
               </button>
-              <button
-                onClick={() => window.open("https://instagram.com/pkconversion", "_blank")}
-                className="p-2 bg-safari-brown rounded-full hover:bg-safari-brown/80 transition-colors"
-              >
-                <Instagram className="w-4 h-4 text-safari-cream" />
-              </button>
-              <button
+<button
                 onClick={() => window.open("https://wa.me/254705302615", "_blank")}
                 className="p-2 bg-safari-gold rounded-full hover:bg-safari-gold/80 transition-colors"
               >
