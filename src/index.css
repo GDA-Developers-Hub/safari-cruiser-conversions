@@ -9,25 +9,41 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 158 29% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 158 29% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 158 29% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 21 38% 35%;
+    --primary-foreground: 48 55% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 158 29% 20%;
+    --secondary-foreground: 48 55% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 48 15% 94%;
+    --muted-foreground: 21 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 48 55% 68%;
+    --accent-foreground: 158 29% 15%;
+    
+    /* Safari Brand Colors */
+    --safari-brown: 21 38% 35%;
+    --safari-green: 158 29% 20%;
+    --safari-gold: 48 55% 68%;
+    --safari-cream: 48 30% 96%;
+    
+    /* Gradients */
+    --gradient-safari: linear-gradient(135deg, hsl(var(--safari-brown)), hsl(var(--safari-green)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--safari-brown) / 0.9), hsl(var(--safari-green) / 0.8));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--safari-gold)), hsl(48 45% 75%));
+    
+    /* Shadows */
+    --shadow-safari: 0 10px 40px -10px hsl(var(--safari-brown) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--safari-brown) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--safari-gold) / 0.3);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -56,26 +72,31 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 158 29% 8%;
+    --foreground: 48 55% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 158 29% 10%;
+    --card-foreground: 48 55% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 158 29% 10%;
+    --popover-foreground: 48 55% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 48 55% 68%;
+    --primary-foreground: 158 29% 15%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 21 38% 25%;
+    --secondary-foreground: 48 55% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 158 20% 15%;
+    --muted-foreground: 48 25% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 21 38% 35%;
+    --accent-foreground: 48 55% 95%;
+    
+    /* Safari Brand Colors Dark Mode */
+    --safari-brown: 21 38% 45%;
+    --safari-green: 158 29% 30%;
+    --safari-gold: 48 55% 75%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
