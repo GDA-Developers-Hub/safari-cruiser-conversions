@@ -19,6 +19,18 @@ import interiorCustomization from "@/assets/Interior Customization.jpeg";
 import bushTruck from "@/assets/bush truck.jpeg";
 import expeditionRig from "@/assets/expedition rig conversion..jpeg";
 import offRoadExhibition from "@/assets/4x4 off-road exhibition.jpeg";
+import bodyWorks from "@/assets/Body Works & Painting.jpeg";
+import customizationLogos from "@/assets/Customization logos.jpeg";
+import builtForWild from "@/assets/PK Conversions—built for the wild, branded for the bold..jpeg";
+import autoRestoration from "@/assets/automotive restoration and conversion..jpeg";
+import behindScenes from "@/assets/behind-the-scenes craftsmanship.jpeg";
+import bespokeBodywork from "@/assets/bespoke bodywork process,.jpeg";
+import fullyConverted from "@/assets/fully converted safari vehicle.jpeg";
+import fullyOutfitted from "@/assets/fully outfitted expedition.jpeg";
+import workshopHeart from "@/assets/heart of PK Conversions’ workshop.jpeg";
+import passengerExp from "@/assets/passenger experience.jpeg";
+import rawFabrication from "@/assets/raw fabrication phase.jpeg";
+import showstopper from "@/assets/showstopper.jpeg";
 
 // Define the gallery images with local imports
 const galleryImages = [
@@ -91,6 +103,66 @@ const galleryImages = [
     src: offRoadExhibition,
     title: "4x4 Off-Road Exhibition",
     category: "Showcase Events"
+  },
+  {
+    src: bodyWorks,
+    title: "Professional Body Works & Painting",
+    category: "Custom Work"
+  },
+  {
+    src: customizationLogos,
+    title: "Custom Branding & Logos",
+    category: "Exterior Upgrades"
+  },
+  {
+    src: builtForWild,
+    title: "Built for the Wild - Branded for the Bold",
+    category: "Completed Conversions"
+  },
+  {
+    src: autoRestoration,
+    title: "Automotive Restoration & Conversion",
+    category: "Conversion Process"
+  },
+  {
+    src: behindScenes,
+    title: "Behind-the-Scenes Craftsmanship",
+    category: "Our Facility"
+  },
+  {
+    src: bespokeBodywork,
+    title: "Bespoke Bodywork Process",
+    category: "Custom Work"
+  },
+  {
+    src: fullyConverted,
+    title: "Fully Converted Safari Vehicle",
+    category: "Conversion Results"
+  },
+  {
+    src: fullyOutfitted,
+    title: "Fully Outfitted Expedition Vehicle",
+    category: "Adventure Vehicles"
+  },
+  {
+    src: workshopHeart,
+    title: "The Heart of Our Workshop",
+    category: "Our Facility"
+  },
+  {
+    src: passengerExp,
+    title: "Premium Passenger Experience",
+    category: "Interior Modifications"
+  },
+  {
+    src: rawFabrication,
+    title: "Raw Fabrication Phase",
+    category: "Conversion Process"
+  },
+  {
+    src: showstopper,
+    title: "Showstopper Conversion",
+    category: "Completed Conversions"
   }
 ];
 

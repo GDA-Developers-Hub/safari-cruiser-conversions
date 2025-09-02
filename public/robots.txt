@@ -1,14 +1,30 @@
-User-agent: Googlebot
-Allow: /
+# robots.txt for pkconversion.co.ke
+# Last updated: 2025-09-02
 
-User-agent: Bingbot
-Allow: /
+# Sitemap reference
+Sitemap: https://pkconversion.co.ke/sitemap.xml
 
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Allow all web crawlers to access all pages
 User-agent: *
 Allow: /
+
+# Crawl-delay for all crawlers
+Crawl-delay: 10
+
+# Disallow access to admin and system directories
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /node_modules/
+
+# Allow image indexing by search engines
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Allow CSS and JS files
+Allow: /*.css$
+Allow: /*.js$
