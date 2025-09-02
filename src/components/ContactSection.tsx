@@ -26,7 +26,7 @@ const ContactSection = () => {
       icon: MapPin,
       title: "Visit Us",
       details: ["Mombasa Road", "Nairobi, Kenya"],
-      action: "https://maps.google.com/?q=Mombasa+Road+Nairobi+Kenyahttps://www.google.com/maps/place/Pkconversions/data=!4m2!3m1!1s0x0:0xa9b077a77f447bf0?sa=X&ved=1t:2428&ictx=111https://maps.app.goo.gl/Sno1ezm7GBuAen446"
+      action: "https://maps.app.goo.gl/RCBSk1WY5TFpZfPk9"
     },
     {
       icon: Clock,

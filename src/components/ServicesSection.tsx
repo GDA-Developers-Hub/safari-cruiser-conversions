@@ -20,29 +20,60 @@ const ServicesSection = () => {
   const primaryServices = [
     {
       icon: Car,
-      title: "Land Cruiser Safari Conversions",
-      description: "Complete transformation of Land Cruisers into premium safari vehicles with pop-up roofs, enhanced visibility, and tourist-friendly modifications.",
-      features: ["Pop-up roof installation", "Enhanced visibility windows", "Tourist seating configuration", "Safari-grade interior"]
+      title: "Safari Vehicle Conversions",
+      description: "Complete transformation of standard vehicles into fully-equipped safari vehicles with all necessary modifications for comfort and safety.",
+      features: [
+        "Pop-up roof installations for optimal game viewing",
+        "Custom safari seats with 360° swivel capability",
+        "Raised suspension for rough terrain",
+        "Reinforced chassis and underbody protection"
+      ]
     },
     {
       icon: Settings,
-      title: "Custom Vehicle Modifications",
-      description: "Tailored modifications to meet specific safari tour requirements, including specialized equipment installation and interior customization.",
-      features: ["Custom seating arrangements", "Equipment mounting", "Storage solutions", "Electrical upgrades"]
+      title: "Body Works & Fabrication",
+      description: "Expert metalwork and fabrication services for custom vehicle modifications and repairs.",
+      features: [
+        "Custom bull bars and nudge bars",
+        "Roof rack and ladder fabrication",
+        "Sliding drawers and storage systems",
+        "Snorkel installation for water crossings"
+      ]
     },
     {
       icon: Shield,
-      title: "Suspension & Safety Upgrades",
-      description: "Heavy-duty suspension systems and safety modifications designed for Kenya's challenging terrain and tourist transportation requirements.",
-      features: ["Heavy-duty suspension", "Safety equipment installation", "Brake system upgrades", "Lighting enhancements"]
+      title: "Mechanical & Performance",
+      description: "Comprehensive mechanical services to ensure your vehicle performs at its best in African conditions.",
+      features: [
+        "Engine overhauls and rebuilds",
+        "Gearbox and differential services",
+        "Brake system upgrades",
+        "Suspension tuning and upgrades"
+      ]
     }
   ];
 
   const additionalServices = [
-    { icon: Wrench, title: "General Mechanical Repairs", description: "Complete automotive repair services" },
-    { icon: Gauge, title: "Engine Diagnostics", description: "Advanced diagnostic and tuning services" },
-    { icon: Camera, title: "Interior Modifications", description: "Custom interior design and installation" },
-    { icon: MapPin, title: "Terrain Preparation", description: "Modifications for specific Kenyan terrains" }
+    { 
+      icon: Wrench, 
+      title: "Electrical Systems", 
+      description: "Custom electrical installations and repairs for all vehicle systems" 
+    },
+    { 
+      icon: Gauge, 
+      title: "Air Conditioning", 
+      description: "Installation and servicing of heavy-duty AC systems" 
+    },
+    { 
+      icon: Camera, 
+      title: "Interior Refurbishment", 
+      description: "Complete interior makeovers and custom upholstery" 
+    },
+    { 
+      icon: MapPin, 
+      title: "4x4 Accessories", 
+      description: "Wide range of off-road accessories and equipment" 
+    }
   ];
 
   return (
@@ -55,11 +86,11 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Our <span className="text-safari-brown">Specialized Services</span>
+            Our <span className="text-safari-brown">Comprehensive Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From complete safari conversions to precision mechanical work, we deliver excellence 
-            in every service for Kenya's tourism and automotive industries.
+            Specializing in Land Cruiser conversions and modifications for the African terrain, 
+            we provide end-to-end solutions for safari operators and overland adventurers.
           </p>
         </motion.div>
 

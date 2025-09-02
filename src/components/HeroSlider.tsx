@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import heroSafari1 from "@/assets/hero-safari-1.jpeg";
 import heroWorkshop from "@/assets/hero-workshop.jpeg";
 import heroSafari2 from "@/assets/hero-safari-2.jpeg";
+import heroSafari3 from "@/assets/hero-safari-3.jpeg";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,18 +13,23 @@ const HeroSlider = () => {
   const slides = [
     {
       image: heroSafari1,
-      title: "Transform Your Adventure",
-      subtitle: "Premium Land Cruiser Safari Conversions"
+      title: "PK CONVERSIONS",
+      subtitle: "YOUR JOURNEY, YOUR VEHICLE, UNIQUELY CRAFTED"
     },
     {
       image: heroWorkshop,
-      title: "Expert Craftsmanship",
-      subtitle: "Professional vehicle conversions by skilled mechanics"
+      title: "BUILT FOR THE WILD",
+      subtitle: "BRANDED FOR THE BOLD"
     },
     {
       image: heroSafari2,
-      title: "Unforgettable Safari Experiences",
-      subtitle: "Quality modifications for Kenya's rugged terrain"
+      title: "ELEVATE YOUR SAFARI EXPERIENCE",
+      subtitle: "CUSTOM VEHICLE CONVERSIONS FOR THE DISCERNING TRAVELER"
+    },
+    {
+      image: heroSafari3,
+      title: "PRECISION ENGINEERING",
+      subtitle: "MEETS AFRICAN TERRAIN"
     }
   ];
 
