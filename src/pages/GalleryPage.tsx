@@ -30,7 +30,9 @@ import fullyOutfitted from "@/assets/fully outfitted expedition.jpeg";
 import workshopHeart from "@/assets/heart of PK Conversions’ workshop.jpeg";
 import passengerExp from "@/assets/passenger experience.jpeg";
 import rawFabrication from "@/assets/raw fabrication phase.jpeg";
-import showstopper from "@/assets/showstopper.jpeg";
+import showstopper from "@/assets/showstopper.jpeg";  
+import kciInterior from "@/assets/KCI’s Automotive Interior Range.jpeg";  
+
 
 // Define the gallery images with local imports
 const galleryImages = [
@@ -159,6 +161,12 @@ const galleryImages = [
     title: "Raw Fabrication Phase",
     category: "Conversion Process"
   },
+
+  {
+      src: kciInterior,
+      title: "KCI Automotive Interior Range",
+      category: "Interior Modifications"
+    },
   {
     src: showstopper,
     title: "Showstopper Conversion",

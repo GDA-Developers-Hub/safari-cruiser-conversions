@@ -1,9 +1,9 @@
-import heroSafari1 from "@/assets/hero-safari-1.jpg";
-import heroWorkshop from "@/assets/hero-workshop.jpg";
-import heroSafari2 from "@/assets/hero-safari-2.jpg";
-import conversionBeforeAfter from "@/assets/conversion-before-after.jpg";
+import heroSafari1 from "@/assets/hero-safari-1.jpeg";
+import heroWorkshop from "@/assets/hero-workshop.jpeg";
+import heroSafari2 from "@/assets/hero-safari-2.jpeg";
+import conversionBeforeAfter from "@/assets/conversion-before.jpeg";
 import interiorConversion from "@/assets/interior-conversion.jpg";
-import pkLogo from "@/assets/pk logo.jpeg";
+import newFaceKit from "@/assets/New face kit.jpeg";
 
 // Placeholder for additional images - replace with actual imports when available
 const additionalImages = [
@@ -50,6 +50,7 @@ const galleryImages = [
     title: "Before & After Conversion",
     category: "Conversion Process"
   },
+  
   {
     src: interiorConversion,
     title: "Custom Interior Design",
@@ -65,10 +66,11 @@ const galleryImages = [
     title: "Tourist Safari Experience",
     category: "Client Success"
   },
+
   {
-    src: pkLogo,
-    title: "Our Fleet",
-    category: "Vehicle Showcase"
+    src: newFaceKit,
+    title: "New Face Kit Installation",
+    category: "Exterior Upgrades"
   },
   ...additionalImages
 ];
