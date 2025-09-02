@@ -4,9 +4,13 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import pkLogo from "@/assets/pk logo.jpeg";
 
-const Navigation = () => {
+interface NavigationProps {
+  dark?: boolean;
+}
+
+const Navigation = ({ dark = false }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(dark);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +21,15 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    // If we're not on the home page, navigate there first
+    if (!window.location.pathname.endsWith('/')) {
+      // Navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
+    } else {
+      // We're already on home page, just scroll to section
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
     setIsOpen(false);
   };
 
@@ -33,7 +44,7 @@ const Navigation = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || dark
           ? "bg-background/95 backdrop-blur-md shadow-card border-b border-border"
           : "bg-transparent"
       }`}
@@ -51,8 +62,8 @@ const Navigation = () => {
               className="w-12 h-10 object-cover rounded-full shadow-sm border-2 border-safari-gold"
             />
             <div className="ml-3">
-              <h2 className={`font-bold text-lg ${isScrolled ? 'text-foreground' : 'text-white'}`}>PK Conversion</h2>
-              <p className={`text-xs ${isScrolled ? 'text-safari-gold' : 'text-white'}`}>Safari Specialists</p>
+              <h2 className={`font-bold text-lg ${isScrolled || dark ? 'text-foreground' : 'text-white'}`}>PK Conversion</h2>
+              <p className={`text-xs ${isScrolled || dark ? 'text-safari-gold' : 'text-white'}`}>Safari Specialists</p>
             </div>
           </div>
 
@@ -61,8 +72,11 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.id)}
-                className={`${isScrolled ? 'text-foreground' : 'text-white'} hover:text-safari-brown transition-colors font-medium`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
+                className={`${isScrolled || dark ? 'text-foreground' : 'text-white'} hover:text-safari-brown transition-colors font-medium`}
               >
                 {item.name}
               </button>
@@ -80,7 +94,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-white'}`}
+            className={`md:hidden p-2 ${isScrolled || dark ? 'text-foreground' : 'text-white'}`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -100,7 +114,10 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.id)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
                 className="block w-full text-left px-4 py-2 text-foreground hover:text-safari-brown transition-colors"
               >
                 {item.name}

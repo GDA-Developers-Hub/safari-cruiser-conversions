@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroSafari1 from "@/assets/hero-safari-1.jpg";
-import heroWorkshop from "@/assets/hero-workshop.jpg";
-import heroSafari2 from "@/assets/hero-safari-2.jpg";
+import heroSafari1 from "@/assets/hero-safari-1.jpeg";
+import heroWorkshop from "@/assets/hero-workshop.jpeg";
+import heroSafari2 from "@/assets/hero-safari-2.jpeg";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
