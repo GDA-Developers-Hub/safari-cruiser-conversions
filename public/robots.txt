@@ -1,14 +1,14 @@
-# robots.txt for pkconversion.co.ke
-# Last updated: 2025-09-02
+# robots.txt for pkconversions.co.ke
+# Last updated: 2025-09-03
 
 # Sitemap reference
-Sitemap: https://pkconversion.co.ke/sitemap.xml
+Sitemap: https://pkconversions.co.ke/sitemap.xml
 
-# Allow all web crawlers to access all pages
+# Default rule for all crawlers
 User-agent: *
 Allow: /
 
-# Crawl-delay for all crawlers
+# Crawl-delay for all crawlers (10 seconds between requests)
 Crawl-delay: 10
 
 # Disallow access to admin and system directories
@@ -17,14 +17,56 @@ Disallow: /wp-admin/
 Disallow: /includes/
 Disallow: /config/
 Disallow: /node_modules/
+Disallow: /src/
+Disallow: /api/
 
-# Allow image indexing by search engines
+# Disallow query strings and session IDs
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /*?s=
+Disallow: /*&s=
+Disallow: /*?search=
+Disallow: /*&search=
+
+# Allow media files
+Allow: /assets/
+Allow: /images/
+Allow: /*.css$
+Allow: /*.js$
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.png$
 Allow: /*.gif$
+Allow: /*.svg$
 Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
 
-# Allow CSS and JS files
-Allow: /*.css$
-Allow: /*.js$
+# Block specific files
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /vite.config.*
+
+# Block common files
+Disallow: /readme.html
+Disallow: /license.txt
+Disallow: /wp-*.html
+Disallow: /tag/
+Disallow: */trackback/
+Disallow: */feed/
+Disallow: */comments/
+
+# Block WordPress files
+Disallow: /wp-*.php
+Disallow: /xmlrpc.php
+
+# Block search engines from indexing the search page
+Disallow: /search/
+
+# Block author archives
+Disallow: /author/
+
+# Block date archives
+Disallow: /*/date/
+Disallow: /*/feed/
