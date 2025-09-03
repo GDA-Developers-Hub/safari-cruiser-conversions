@@ -1,9 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, lazy, Suspense } from "react";
 import { motion, useInView } from "framer-motion";
-import { X, ZoomIn, ArrowRight } from "lucide-react";
+import { X, ZoomIn, ArrowRight, MapPin, Loader2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import galleryImages from "@/data/galleryImages";
+import '@/styles/leaflet.css';
+
+// Lazy load the MapComponent
+const MapComponent = lazy(() => import('@/components/MapComponent'));
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -101,6 +105,45 @@ const GallerySection = () => {
           <div className="p-6">
             <h3 className="text-4xl font-bold text-safari-gold mb-2">15+</h3>
             <p className="text-muted-foreground font-medium">Years Experience</p>
+          </div>
+        </motion.div>
+
+        {/* Map Section */}
+        <motion.div 
+          className="mt-24"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.9 }}
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-foreground mb-3">Visit Our Workshop</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Come see our state-of-the-art facility where we transform vehicles into exceptional safari cruisers
+            </p>
+          </div>
+          
+          <div className="relative">
+            <Suspense fallback={
+              <div className="h-[400px] flex items-center justify-center bg-gray-100 rounded-xl">
+                <Loader2 className="w-8 h-8 text-safari-brown animate-spin" />
+              </div>
+            }>
+              <MapComponent 
+                position={[-1.2921, 36.8219]} // Nairobi coordinates
+                zoom={14}
+                popupText="Safari Cruiser Conversions Workshop - Visit us for a tour!"
+              />
+            </Suspense>
+            <div className="absolute -top-4 -right-4 z-10">
+              <div className="bg-safari-brown text-white p-3 rounded-full shadow-lg">
+                <MapPin className="w-6 h-6" />
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-center text-muted-foreground text-sm">
+            <p>We're located in the heart of Nairobi's industrial area</p>
+            <p className="font-medium mt-1 text-foreground">Open: Mon - Sat, 8:00 AM - 5:00 PM</p>
           </div>
         </motion.div>
       </div>

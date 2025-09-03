@@ -1,0 +1,12 @@
+@import 'leaflet/dist/leaflet.css';
+
+.leaflet-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.leaflet-marker-icon {
+  filter: hue-rotate(40deg) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}

@@ -15,7 +15,7 @@ import interiorConversion from "@/assets/interior-conversion.jpg";
 import workshop from "@/assets/workshop.jpeg";
 import vehicleBody from "@/assets/vehicle body fabrication.jpeg";
 import newFaceKit from "@/assets/New face kit.jpeg";
-import interiorCustomization from "@/assets/Interior Customization.jpeg";
+import seatcover from "@/assets/seatcover.jpeg";
 import bushTruck from "@/assets/bush truck.jpeg";
 import expeditionRig from "@/assets/expedition rig conversion..jpeg";
 import offRoadExhibition from "@/assets/4x4 off-road exhibition.jpeg";
@@ -31,7 +31,7 @@ import workshopHeart from "@/assets/heart of PK Conversions’ workshop.jpeg";
 import passengerExp from "@/assets/passenger experience.jpeg";
 import rawFabrication from "@/assets/raw fabrication phase.jpeg";
 import showstopper from "@/assets/showstopper.jpeg";  
-import kciInterior from "@/assets/KCI’s Automotive Interior Range.jpeg";  
+import safariStandard from "@/assets/Safari Standard.jpeg";
 
 
 // Define the gallery images with local imports
@@ -68,8 +68,8 @@ const galleryImages = [
   },
   {
     src: interiorConversion,
-    title: "Custom Interior Design",
-    category: "Interior Modifications"
+    title: "Safari Executive",
+    category: "Safari Seats"
   },
   {
     src: workshop,
@@ -87,9 +87,9 @@ const galleryImages = [
     category: "Exterior Upgrades"
   },
   {
-    src: interiorCustomization,
-    title: "Interior Customization",
-    category: "Luxury Interiors"
+    src: seatcover,
+    title: "seatcover",
+    category: "Accessories"
   },
   {
     src: bushTruck,
@@ -163,14 +163,14 @@ const galleryImages = [
   },
 
   {
-      src: kciInterior,
-      title: "KCI Automotive Interior Range",
-      category: "Interior Modifications"
-    },
-  {
     src: showstopper,
     title: "Showstopper Conversion",
     category: "Completed Conversions"
+  },
+  {
+    src: safariStandard,
+    title: "Safari Standard",
+    category: "Safari Seats"
   }
 ];
 
@@ -179,7 +179,7 @@ const GalleryPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{src: string; title: string; category: string} | null>(null);
   const navigate = useNavigate();
 
 
@@ -210,7 +210,7 @@ const GalleryPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                onClick={() => setSelectedImage(image.src)}
+                onClick={() => setSelectedImage(image)}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -252,8 +252,8 @@ const GalleryPage = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selectedImage}
-              alt="Gallery image"
+              src={selectedImage.src}
+              alt={selectedImage.title}
               className="w-full h-full object-contain rounded-lg"
             />
             <button
