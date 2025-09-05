@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import SEO from "@/components/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,7 +13,15 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 overflow-x-hidden">
+      <SEO 
+        page="homepage" 
+        customData={{ 
+          title: "404 - Page Not Found | PK Conversions",
+          description: "The page you're looking for doesn't exist. Return to PK Conversions homepage for Land Cruiser conversion services in Kenya.",
+          noindex: true 
+        }} 
+      />
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">404</h1>
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>

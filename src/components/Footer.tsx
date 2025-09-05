@@ -64,16 +64,26 @@ const Footer = () => {
               <button
                 onClick={() => window.open("https://www.facebook.com/peter.kamau.754/", "_blank")}
                 className="p-2 bg-safari-brown rounded-full hover:bg-safari-brown/80 transition-colors"
+                aria-label="Follow us on Facebook"
               >
                 <Facebook className="w-4 h-4 text-safari-cream" />
               </button>
-<button
+              <button
                 onClick={() => window.open("https://wa.me/254705302615", "_blank")}
                 className="p-2 bg-green-600 rounded-full hover:bg-green-700 transition-colors"
                 aria-label="Chat on WhatsApp"
               >
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.498 14.382v-.002c-.301-.15-1.758-.867-2.03-.966-.273-.1-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.27-.465-2.42-1.485-.89-.795-1.484-1.77-1.66-2.07-.17-.29-.018-.449.13-.592.136-.133.297-.345.445-.525.146-.181.193-.301.296-.496.1-.21.049-.375-.025-.524-.075-.15-.673-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.01-.571-.01-.2 0-.523.074-.797.359-.273.3-1.05 1.02-1.05 2.475s1.07 2.865 1.219 3.075c.15.195 2.1 3.195 5.1 4.485.714.3 1.27.48 1.704.63.714.227 1.36.195 1.87.12.574-.09 1.758-.719 2.006-1.426.248-.705.248-1.29.18-1.42-.07-.12-.27-.195-.57-.345m-5.448 7.113h-.016a9.87 9.87 0 01-5.031-1.38l-.36-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.3A11.815 11.815 0 0012.05 0C5.496 0 .16 5.335.157 11.892c0 2.096.55 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.723 1.465h.006c6.554 0 11.89-5.335 11.89-11.89 0-3.18-1.258-6.196-3.54-8.473z"/>
+                </svg>
+              </button>
+              <button
+                onClick={() => window.open("https://www.tiktok.com/@jordansgarage23/video/7542280007905725704", "_blank")}
+                className="p-2 bg-black rounded-full hover:bg-gray-800 transition-colors"
+                aria-label="Follow us on TikTok"
+              >
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                 </svg>
               </button>
             </div>

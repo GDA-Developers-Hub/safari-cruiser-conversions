@@ -1,4 +1,57 @@
-// SEO Content for PK Conversion Ltd - Enhanced for better search visibility and user engagement
+// Advanced SEO Content for PK Conversion Ltd - Enhanced for better search visibility and user engagement
+
+// Advanced SEO Configuration
+export const seoConfig = {
+  siteName: "PK Conversions",
+  siteUrl: "https://pkconversions.co.ke",
+  defaultImage: "/images/og-image.jpg",
+  twitterHandle: "@PKConversions",
+  facebookAppId: "123456789",
+  googleAnalyticsId: "G-XXXXXXXXXX",
+  googleTagManagerId: "GTM-XXXXXXX",
+  locale: "en_KE",
+  alternateLocales: ["en_US", "en_GB"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "google-site-verification-code",
+    bing: "bing-site-verification-code",
+    yandex: "yandex-verification-code",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_KE",
+    url: "https://pkconversions.co.ke",
+    siteName: "PK Conversions",
+    title: "PK Conversions | #1 Land Cruiser Conversion Experts in Kenya",
+    description: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PK Conversions - Land Cruiser Conversion Experts",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@PKConversions",
+    creator: "@PKConversions",
+    title: "PK Conversions | #1 Land Cruiser Conversion Experts in Kenya",
+    description: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi.",
+    images: ["/images/twitter-card.jpg"],
+  },
+};
 
 export const seoContent = {
   homepage: {
@@ -177,4 +230,285 @@ export const schemaMarkup = {
   "sameAs": [
     "https://www.facebook.com/peter.kamau.754/"
   ]
+};
+
+// Advanced Structured Data
+export const structuredData = {
+  organization: {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PK Conversion Ltd",
+    "alternateName": "PK Conversions",
+    "url": "https://pkconversions.co.ke",
+    "logo": "https://pkconversions.co.ke/images/logo.png",
+    "description": "Kenya's premier Land Cruiser conversion specialists specializing in safari vehicle modifications, 4x4 upgrades, and off-road expedition builds.",
+    "foundingDate": "2008",
+    "numberOfEmployees": "10-20",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mombasa Road",
+      "addressLocality": "Nairobi",
+      "addressRegion": "Nairobi",
+      "postalCode": "00100",
+      "addressCountry": "KE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+254705302615",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Swahili"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/peter.kamau.754/",
+      "https://www.instagram.com/pkconversions/",
+      "https://www.linkedin.com/company/pk-conversions/"
+    ]
+  },
+  
+  localBusiness: {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveRepairShop",
+    "name": "PK Conversion Ltd",
+    "image": "https://pkconversions.co.ke/images/workshop.jpg",
+    "description": "Professional Land Cruiser conversion and 4x4 modification services in Nairobi, Kenya.",
+    "url": "https://pkconversions.co.ke",
+    "telephone": "+254705302615",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mombasa Road",
+      "addressLocality": "Nairobi",
+      "addressRegion": "Nairobi",
+      "postalCode": "00100",
+      "addressCountry": "KE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -1.3029,
+      "longitude": 36.8660
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.3029,
+        "longitude": 36.8660
+      },
+      "geoRadius": "50000"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "4x4 and Safari Vehicle Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Land Cruiser Pop Top Conversion",
+            "description": "Custom safari pop top roof conversions for Land Cruiser vehicles"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "4x4 Mechanical Services",
+            "description": "Professional mechanical repairs and maintenance for 4x4 vehicles"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Off-Road Modifications",
+            "description": "Suspension upgrades, underbody protection, and expedition builds"
+          }
+        }
+      ]
+    }
+  },
+
+  breadcrumbList: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pkconversions.co.ke"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://pkconversions.co.ke/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Gallery",
+        "item": "https://pkconversions.co.ke/gallery"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Contact",
+        "item": "https://pkconversions.co.ke/#contact"
+      }
+    ]
+  },
+
+  faqPage: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does a Land Cruiser pop top conversion take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A complete Land Cruiser pop top conversion typically takes 2-4 weeks depending on the complexity of the build and custom requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of a safari vehicle conversion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Safari vehicle conversion costs vary based on the scope of work. Basic pop top conversions start from KES 800,000, while full expedition builds can range from KES 1.5M to KES 3M. Contact us for a detailed quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide warranty on your conversions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide a comprehensive 2-year warranty on all our conversion work and a 1-year warranty on mechanical services."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you work on other 4x4 vehicles besides Land Cruisers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While we specialize in Land Cruisers, we also work on other 4x4 vehicles including Toyota Hilux, Prado, and some other makes. Contact us to discuss your specific vehicle."
+        }
+      }
+    ]
+  }
+};
+
+// Robots.txt content
+export const robotsTxt = `User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://pkconversions.co.ke/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /`;
+
+// Sitemap URLs
+export const sitemapUrls = [
+  {
+    url: "https://pkconversions.co.ke/",
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: "weekly",
+    priority: "1.0"
+  },
+  {
+    url: "https://pkconversions.co.ke/gallery",
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: "monthly",
+    priority: "0.8"
+  },
+  {
+    url: "https://pkconversions.co.ke/#services",
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: "monthly",
+    priority: "0.9"
+  },
+  {
+    url: "https://pkconversions.co.ke/#contact",
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: "monthly",
+    priority: "0.7"
+  }
+];
+
+// Meta tags generator function
+export const generateMetaTags = (page: keyof typeof seoContent, customData?: any) => {
+  const pageData = seoContent[page];
+  const config = seoConfig;
+  
+  return {
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
+    keywords: pageData.keywords.join(", "),
+    author: "PK Conversions",
+    robots: "index, follow",
+    viewport: "width=device-width, initial-scale=1",
+    "theme-color": "#8B4513",
+    "msapplication-TileColor": "#8B4513",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": config.siteName,
+    "format-detection": "telephone=no",
+    
+    // Open Graph
+    "og:type": config.openGraph.type,
+    "og:title": pageData.metaTitle,
+    "og:description": pageData.metaDescription,
+    "og:url": `${config.siteUrl}${customData?.path || ""}`,
+    "og:site_name": config.siteName,
+    "og:locale": config.openGraph.locale,
+    "og:image": customData?.image || config.openGraph.images[0].url,
+    "og:image:width": config.openGraph.images[0].width,
+    "og:image:height": config.openGraph.images[0].height,
+    "og:image:alt": config.openGraph.images[0].alt,
+    
+    // Twitter
+    "twitter:card": config.twitter.card,
+    "twitter:site": config.twitter.site,
+    "twitter:creator": config.twitter.creator,
+    "twitter:title": pageData.metaTitle,
+    "twitter:description": pageData.metaDescription,
+    "twitter:image": customData?.image || config.openGraph.images[0].url,
+    
+    // Additional SEO
+    "canonical": `${config.siteUrl}${customData?.path || ""}`,
+    "alternate": "en",
+    "geo.region": "KE",
+    "geo.placename": "Nairobi",
+    "geo.position": "-1.3029;36.8660",
+    "ICBM": "-1.3029, 36.8660",
+    
+    // Verification
+    "google-site-verification": config.verification.google,
+    "msvalidate.01": config.verification.bing,
+    "yandex-verification": config.verification.yandex,
+  };
 };

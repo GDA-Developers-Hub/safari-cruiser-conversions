@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import HeroSlider from "@/components/HeroSlider";
 import AboutSection from "@/components/AboutSection";
@@ -9,10 +8,13 @@ import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SEO from "@/components/SEO";
 
 const Index = () => {
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO page="homepage" />
       <Navigation />
       
       <main>

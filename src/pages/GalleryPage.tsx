@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { X, ArrowLeft } from "lucide-react";
+import { X, ArrowLeft, Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
 
 // Import all images from assets
 import heroSafari1 from "@/assets/hero-safari-1.jpeg";
@@ -32,6 +33,12 @@ import passengerExp from "@/assets/passenger experience.jpeg";
 import rawFabrication from "@/assets/raw fabrication phase.jpeg";
 import showstopper from "@/assets/showstopper.jpeg";  
 import safariStandard from "@/assets/Safari Standard.jpeg";
+
+// Import videos from assets (you'll add these to the assets folder)
+import video1 from "@/assets/vedio1.mp4";
+import video2 from "@/assets/video2.mp4";
+import video3 from "@/assets/video3.mp4";
+import video4 from "@/assets/video4.mp4";
 
 
 // Define the gallery images with local imports
@@ -174,17 +181,46 @@ const galleryImages = [
   }
 ];
 
+// Define the gallery videos
+const galleryVideos = [
+  {
+    src: video1,
+    title: "Workshop Process",
+    category: "Behind the Scenes",
+    description: "Watch our skilled craftsmen transform vehicles into safari cruisers"
+  },
+  {
+    src: video2,
+    title: "Vehicle Transformation",
+    category: "Conversion Process",
+    description: "See the complete before and after transformation process"
+  },
+  {
+    src: video3,
+    title: "Safari Adventure",
+    category: "Client Success",
+    description: "Our converted vehicles in action on safari adventures"
+  },
+  {
+    src: video4,
+    title: "Custom Fabrication",
+    category: "Custom Work",
+    description: "Detailed look at our custom fabrication and bodywork process"
+  }
+];
+
 const GalleryPage = () => {
   // Ensure the page is scrolled to top on load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const [selectedImage, setSelectedImage] = useState<{src: string; title: string; category: string} | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<{src: string; title: string; category: string; description: string} | null>(null);
   const navigate = useNavigate();
 
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO page="gallery" customData={{ path: "/gallery" }} />
       <Navigation dark={true} />
       <div className="pt-24 pb-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -232,10 +268,61 @@ const GalleryPage = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Videos Section */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-foreground mb-4">
+                Our <span className="text-safari-brown">Videos</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Watch our skilled craftsmen in action as they transform vehicles into exceptional safari cruisers
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-8">
+              {galleryVideos.map((video, index) => (
+                <motion.div
+                  key={index}
+                  className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-safari transition-all duration-300 cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: (index + galleryImages.length) * 0.05 }}
+                  onClick={() => setSelectedVideo(video)}
+                >
+                  <div className="aspect-video bg-gradient-to-br from-safari-brown to-safari-gold flex items-center justify-center relative">
+                    <div className="text-center text-white z-10">
+                      <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <Play className="w-10 h-10 ml-1" />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">{video.title}</h3>
+                      <p className="text-sm opacity-90">{video.category}</p>
+                    </div>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                  </div>
+                  
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-xs text-safari-gold font-medium mb-1">
+                        {video.category}
+                      </p>
+                      <h3 className="text-white font-semibold text-lg leading-tight mb-2">
+                        {video.title}
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        {video.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal for Images */}
       {selectedImage && (
         <motion.div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
@@ -258,6 +345,55 @@ const GalleryPage = () => {
             />
             <button
               onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <motion.div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setSelectedVideo(null)}
+        >
+          <motion.div
+            className="relative max-w-4xl max-h-[90vh] w-full"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="bg-white rounded-lg overflow-hidden">
+              <div className="aspect-video">
+                <video
+                  src={selectedVideo.src}
+                  controls
+                  className="w-full h-full object-cover"
+                  poster=""
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  {selectedVideo.title}
+                </h3>
+                <p className="text-safari-gold text-sm font-medium mb-3">
+                  {selectedVideo.category}
+                </p>
+                <p className="text-muted-foreground">
+                  {selectedVideo.description}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => setSelectedVideo(null)}
               className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
             >
               <X className="w-6 h-6" />
