@@ -66,6 +66,8 @@ const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const additionalServices = [
+ 
+    
     { 
       icon: Settings,
       title: "Detachable Windows System",
@@ -126,7 +128,7 @@ const ServicesSection = () => {
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
             Additional <span className="text-safari-green">Services</span>
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {additionalServices.map((service, index) => (
               <ServiceCard key={index} service={service} index={index} isInView={isInView} />
             ))}
