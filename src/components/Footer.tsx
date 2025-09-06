@@ -140,7 +140,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-safari-gold mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-safari-cream/80 text-sm">Mombasa Road</p>
+                  <p className="text-safari-cream/80 text-sm">Eastern Bypass</p>
                   <p className="text-safari-cream/80 text-sm">Nairobi, Kenya</p>
                 </div>
               </div>

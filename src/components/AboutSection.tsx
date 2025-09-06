@@ -45,7 +45,7 @@ const AboutSection = () => {
             </h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               At PK Conversion Ltd, we're passionate about creating exceptional safari experiences 
-              through expert vehicle modifications. Located on Mombasa Road, Nairobi, we've been 
+              through expert vehicle modifications. Located on Eastern Bypass, Nairobi, we've been 
               serving Kenya's tourism industry with premium Land Cruiser conversions that withstand 
               the country's diverse terrain.
             </p>

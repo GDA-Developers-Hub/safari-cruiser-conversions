@@ -26,7 +26,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Mombasa Road", "Nairobi, Kenya"],
+      details: ["Eastern Bypass", "Nairobi, Kenya"],
       action: "https://maps.app.goo.gl/RCBSk1WY5TFpZfPk9"
     },
     {
@@ -144,7 +144,7 @@ const ContactSection = () => {
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-foreground mb-3">Find Us</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Visit our workshop on Mombasa Road in Nairobi. We're conveniently located 
+              Visit our workshop on Eastern Bypass in Nairobi. We're conveniently located 
               near major automotive businesses and industrial areas for easy access.
             </p>
           </div>

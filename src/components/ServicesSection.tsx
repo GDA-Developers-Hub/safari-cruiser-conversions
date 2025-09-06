@@ -8,71 +8,93 @@ import {
   Camera, 
   MapPin,
   Users,
-  Gauge
+  Gauge,
+  Image as ImageIcon
 } from "lucide-react";
+import detachableWindows from "@/assets/detachable windows frame.jpeg";
+import mahoganyFrame from "@/assets/fixed mahogany fitted canvas frame.jpeg";
+import fixedSlidingWindows from "@/assets/fixed sliding windows.jpeg";
+import openGameTourVan from "@/assets/OPEN GAME TOUR VAN.jpeg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+const ServiceCard = ({ service, index, isInView }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={isInView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.4, delay: 0.2 + (index * 0.1) }}
+    whileHover={{ y: -5, transition: { duration: 0.2 } }}
+  >
+    <Card className={`h-full flex flex-col bg-gradient-to-b from-background to-muted/30 hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-safari-green/30 ${service.large ? 'lg:col-span-2' : ''}`}>
+      <CardContent className="p-6 flex flex-col items-center text-center">
+        <div className={`w-full ${service.large ? 'h-64' : 'h-48'} mb-4 overflow-hidden rounded-lg`}>
+          {service.image ? (
+            <img 
+              src={
+                service.image.includes('detachable') ? detachableWindows :
+                service.image.includes('mahogany') ? mahoganyFrame :
+                service.image.includes('sliding') ? fixedSlidingWindows :
+                openGameTourVan
+              } 
+              alt={service.title}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div className="w-full h-full bg-safari-green/10 flex items-center justify-center rounded-lg">
+              <service.icon className="w-12 h-12 text-safari-green" />
+            </div>
+          )}
+        </div>
+        <h4 className="text-lg font-semibold mb-2 text-foreground">
+          {service.title}
+        </h4>
+        <p className="text-muted-foreground text-sm mb-3">
+          {service.description}
+        </p>
+        {service.caption && (
+          <p className="text-xs text-safari-green/80 italic mt-auto">
+            {service.caption}
+          </p>
+        )}
+      </CardContent>
+    </Card>
+  </motion.div>
+);
 
 const ServicesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const primaryServices = [
-    {
-      icon: Car,
-      title: "Safari Vehicle Conversions",
-      description: "Complete transformation of standard vehicles into fully-equipped safari vehicles with all necessary modifications for comfort and safety.",
-      features: [
-        "Pop-up roof installations for optimal game viewing",
-        "Custom safari seats with 360° swivel capability",
-        "Raised suspension for rough terrain",
-        "Reinforced chassis and underbody protection"
-      ]
-    },
-    {
-      icon: Settings,
-      title: "Body Works & Fabrication",
-      description: "Expert metalwork and fabrication services for custom vehicle modifications and repairs.",
-      features: [
-        "Custom bull bars and nudge bars",
-        "Roof rack and ladder fabrication",
-        "Sliding drawers and storage systems",
-        "Snorkel installation for water crossings"
-      ]
-    },
-    {
-      icon: Shield,
-      title: "Mechanical & Performance",
-      description: "Comprehensive mechanical services to ensure your vehicle performs at its best in African conditions.",
-      features: [
-        "Engine overhauls and rebuilds",
-        "Gearbox and differential services",
-        "Brake system upgrades",
-        "Suspension tuning and upgrades"
-      ]
-    }
-  ];
-
   const additionalServices = [
     { 
-      icon: Wrench, 
-      title: "Electrical Systems", 
-      description: "Custom electrical installations and repairs for all vehicle systems" 
+      icon: Settings,
+      title: "Detachable Windows System",
+      description: "Innovative window solutions for ultimate flexibility",
+      image: "detachable windows frame.jpeg",
+      caption: "This design comes with a detachable window frame + a fully fitted canvas frame for exchange when needed. Its rear passenger doors are winding window panes."
     },
     { 
-      icon: Gauge, 
-      title: "Air Conditioning", 
-      description: "Installation and servicing of heavy-duty AC systems" 
+      icon: Settings,
+      title: "Mahogany Canvas Frame",
+      description: "Elegant fixed frame with premium finish",
+      image: "fixed mahogany fitted canvas frame.jpeg",
+      caption: "This design comes with fixed canvas frame. The outline of the frame is made of clear vanished mahogany giving it its beautiful finished look. This design is suitable for game drives as its wide enough to allow spectacular views."
     },
     { 
-      icon: Camera, 
-      title: "Interior Refurbishment", 
-      description: "Complete interior makeovers and custom upholstery" 
+      icon: Settings,
+      title: "Fixed Sliding Windows",
+      description: "Versatile window configuration for passenger comfort",
+      image: "fixed sliding windows.jpeg",
+      caption: "This design has its rear passenger windows fixed and either sliding or winding windows on its passenger rear doors.",
+      large: true
     },
     { 
-      icon: MapPin, 
-      title: "4x4 Accessories", 
-      description: "Wide range of off-road accessories and equipment" 
+      icon: Car,
+      title: "Open Game Tour Van",
+      description: "Specialized design for optimal game viewing experiences",
+      image: "OPEN GAME TOUR VAN.jpeg",
+      caption: "This design consists of metal pipes and canvas canopy. As its name suggests, it's suitable for open game viewing in bush safaris. It also consists of clear vanished mahogany on the bases and arm rests to ensure clients' comfort and easy photography.",
+      large: true
     }
   ];
 
@@ -94,40 +116,6 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* Primary Services */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {primaryServices.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <Card className="h-full hover:shadow-safari transition-all duration-300 border-l-4 border-l-safari-brown">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 bg-gradient-safari rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="w-8 h-8 text-safari-cream" />
-                  </div>
-                  <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-2 h-2 bg-safari-gold rounded-full mr-3 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Additional Services */}
         <motion.div
           className="mb-12"
@@ -135,18 +123,12 @@ const ServicesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
             Additional <span className="text-safari-green">Services</span>
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {additionalServices.map((service, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-card transition-all">
-                <CardContent className="p-0">
-                  <service.icon className="w-12 h-12 mx-auto mb-4 text-safari-green" />
-                  <h4 className="font-semibold mb-2 text-foreground">{service.title}</h4>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
+              <ServiceCard key={index} service={service} index={index} isInView={isInView} />
             ))}
           </div>
         </motion.div>

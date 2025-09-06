@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
 import HeroSlider from "@/components/HeroSlider";
+import WelcomeSection from "@/components/WelcomeSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import GallerySection from "@/components/GallerySection";
@@ -22,6 +23,7 @@ const Index = () => {
           <HeroSlider />
         </section>
         
+        <WelcomeSection />
         <AboutSection />
         <ServicesSection />
         <GallerySection />

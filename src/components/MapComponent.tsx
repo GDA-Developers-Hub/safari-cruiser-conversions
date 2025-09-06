@@ -115,7 +115,7 @@ const MapComponent = ({
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-safari-brown" />
-          Find Us on Mombasa Road
+          Find Us on Eastern Bypass
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -134,7 +134,7 @@ const MapComponent = ({
               <Popup>
                 <div className="font-sans text-sm text-center">
                   <strong className="text-safari-brown">{popupText}</strong>
-                  <p className="mt-1 text-muted-foreground">Mombasa Road, Nairobi, Kenya</p>
+                  <p className="mt-1 text-muted-foreground">Eastern Bypass, Nairobi, Kenya</p>
                   <p className="mt-1 text-xs text-muted-foreground">
                     Coordinates: {position[0].toFixed(6)}, {position[1].toFixed(6)}
                   </p>

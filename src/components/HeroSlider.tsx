@@ -89,13 +89,21 @@ const HeroSlider = () => {
           </motion.h1>
           <motion.p
             key={`subtitle-${currentSlide}`}
-            className="text-xl md:text-2xl mb-8 text-safari-gold font-light"
+            className="text-xl md:text-2xl mb-4 text-safari-gold font-light"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {slides[currentSlide].subtitle}
           </motion.p>
+          <motion.div
+            className="text-lg md:text-xl mb-8 text-safari-cream/90 font-medium italic"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            Where Innovation Meets Craftsmanship
+          </motion.div>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ y: 30, opacity: 0 }}
