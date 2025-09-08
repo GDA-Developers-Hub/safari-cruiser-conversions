@@ -42,6 +42,15 @@ export const seoConfig = {
         alt: "PK Conversion Ltd - Land Cruiser Conversion Experts",
       },
     ],
+    videos: [
+      {
+        url: "https://drive.google.com/file/d/1E8CYvzDOW7lsLrLNC6tsTTGSvKtlUrVY/view?usp=sharing",
+        width: 1280,
+        height: 720,
+        type: "video/mp4",
+        alt: "PK Conversions - Our Workshop and Process",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -170,20 +179,20 @@ export const seoContent = {
   
   contact: {
     metaTitle: "Contact PK Conversions | Nairobi 4x4 & Safari Vehicle Specialists | Kenya",
-    metaDescription: "Visit our workshop on Mombasa Road, Nairobi, for expert Land Cruiser conversions, 4x4 modifications, and safari vehicle services. Call +254 705 302615 or WhatsApp for a free consultation.",
+    metaDescription: "Visit our workshop on Eastern Bypass , Nairobi, for expert Land Cruiser conversions, 4x4 modifications, and safari vehicle services. Call +254 705 302615 or WhatsApp for a free consultation.",
     h1: "Contact Our 4x4 & Safari Vehicle Specialists",
     h2: "Let's Build Your Dream Safari Vehicle Together",
     content: `
-      <p>Our workshop is conveniently located on Mombasa Road, Nairobi, where our team of 4x4 specialists is ready to bring your safari vehicle vision to life. We're open Monday to Saturday, 8:00 AM to 6:00 PM for all your Land Cruiser and 4x4 needs.</p>
+      <p>Our workshop is conveniently located on  Eastern Bypass, Nairobi, where our team of 4x4 specialists is ready to bring your safari vehicle vision to life. We're open Monday to Saturday, 8:00 AM to 6:00 PM for all your Land Cruiser and 4x4 needs.</p>
       <p>For the quickest response, call us directly at <a href="tel:+254705302615" className="text-primary hover:underline">+254 705 302615</a> or chat with us on <a href="https://wa.me/254705302615" className="text-primary hover:underline">WhatsApp</a>. You can also fill out the contact form below and we'll get back to you within 24 hours.</p>
-      <p><strong>Workshop Address:</strong> Mombasa Road, Nairobi, Kenya (Near Sameer Business Park)</p>
+      <p><strong>Workshop Address:</strong> Eastern Bypass , Nairobi, Kenya (Near Sameer Business Park)</p>
       <p><strong>Email:</strong> info@pkconversions.co.ke</p>
       <p><strong>Operating Hours:</strong> Monday - Saturday, 8:00 AM - 6:00 PM</p>
     `,
     keywords: [
       "Land Cruiser garage near me",
       "best 4x4 mechanics in Nairobi",
-      "Mombasa Road auto workshop",
+      " Eastern Bypass auto workshop",
       "safari vehicle conversion consultation",
       "emergency Land Cruiser repair Nairobi",
       "free quote for 4x4 conversion",
@@ -196,14 +205,14 @@ export const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   "name": "PK Conversion Ltd",
-  "image": "https://pkconversion.co.ke/images/logo.jpg",
+  "image": "https://pkconversion.co.ke/assets/pklogo.png",
   "@id": "https://pkconversion.co.ke",
   "url": "https://pkconversion.co.ke",
   "telephone": "+254705302615",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Mombasa Road",
+    "streetAddress": " Eastern Bypass",
     "addressLocality": "Nairobi",
     "addressRegion": "Nairobi",
     "postalCode": "00100",
@@ -228,12 +237,35 @@ export const schemaMarkup = {
     "closes": "18:00"
   },
   "sameAs": [
-    "https://www.facebook.com/peter.kamau.754/"
+    "https://www.facebook.com/peter.kamau.754/",
+    "https://www.instagram.com/pkconversions/",
+    "https://www.linkedin.com/company/pk-conversions/",
+    "https://www.tiktok.com/@pkconversions "
+
   ]
 };
 
 // Advanced Structured Data
 export const structuredData = {
+  video: {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "PK Conversions - Our Workshop and Process",
+    "description": "A behind-the-scenes look at our Land Cruiser conversion process and workshop in Nairobi, Kenya.",
+    "thumbnailUrl": "https://pkconversion.co.ke/images/video-thumbnail.jpg",
+    "uploadDate": "2024-09-08T10:00:00+03:00",
+    "duration": "PT5M30S",
+    "contentUrl": "https://drive.google.com/file/d/1E8CYvzDOW7lsLrLNC6tsTTGSvKtlUrVY/view?usp=sharing",
+    "embedUrl": "https://drive.google.com/file/d/1E8CYvzDOW7lsLrLNC6tsTTGSvKtlUrVY/preview",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PK Conversion Ltd",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pkconversion.co.ke/logo.png"
+      }
+    }
+  },
   organization: {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -241,7 +273,7 @@ export const structuredData = {
     "missionStatement": "As a company rooted in innovation and trust, our mission is to transform everyday vehicles into world-class safari and utility machines, built to withstand the toughest terrains. At PK Conversions, we don't just modify vehicles – we create experiences.",
     "alternateName": "PK Conversions",
     "url": "https://pkconversions.co.ke",
-    "logo": "https://pkconversions.co.ke/images/logo.png",
+    "logo": "https://pkconversions.co.ke/assets/Mtu.jpeg",
     "description": "Kenya's premier Land Cruiser conversion specialists specializing in safari vehicle modifications, 4x4 upgrades, and off-road expedition builds.",
     "foundingDate": "2017",
     "founder": {
@@ -252,7 +284,7 @@ export const structuredData = {
     "numberOfEmployees": "10-20",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Mombasa Road",
+      "streetAddress": " Eastern Bypass",
       "addressLocality": "Nairobi",
       "addressRegion": "Nairobi",
       "postalCode": "00100",
@@ -267,7 +299,8 @@ export const structuredData = {
     "sameAs": [
       "https://www.facebook.com/peter.kamau.754/",
       "https://www.instagram.com/pkconversions/",
-      "https://www.linkedin.com/company/pk-conversions/"
+      "https://www.linkedin.com/company/pk-conversions/",
+      "https://www.tiktok.com/@pkconversions"
     ]
   },
   
@@ -275,14 +308,14 @@ export const structuredData = {
     "@context": "https://schema.org",
     "@type": "AutomotiveRepairShop",
     "name": "PK Conversion Ltd",
-    "image": "https://pkconversions.co.ke/images/workshop.jpg",
+    "image": "https://pkconversions.co.ke/assests/workshop.jpeg",
     "description": "Professional Land Cruiser conversion and 4x4 modification services in Nairobi, Kenya.",
     "url": "https://pkconversions.co.ke",
     "telephone": "+254705302615",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Mombasa Road",
+      "streetAddress": " Eastern Bypass",
       "addressLocality": "Nairobi",
       "addressRegion": "Nairobi",
       "postalCode": "00100",

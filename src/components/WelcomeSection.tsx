@@ -1,5 +1,5 @@
 import React from 'react';
-import zoteImage from '@/assets/Zote.jpeg';
+import WelcomeImage from '@/assets/Mtu.jpeg';
 
 const WelcomeSection = () => {
   return (
@@ -9,7 +9,7 @@ const WelcomeSection = () => {
           <div className="md:w-1/2">
             <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
               <img
-                src={zoteImage}
+                src={WelcomeImage}
                 alt="PK Conversions Showcase"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
@@ -19,6 +19,8 @@ const WelcomeSection = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Welcome to Our World of Excellence</h2>
             <p className="text-xl text-gray-700 leading-relaxed">
               At PK Conversions, we transform vehicles into extraordinary assets. From custom van conversions to flawless body repairs and showroom-quality paint jobs, we combine technical precision with creative vision to bring your automotive dreams to life.
+              <br /><br />
+              <span className="font-semibold">Director Eng Peter K Gathaci</span>
             </p>
           </div>
         </div>

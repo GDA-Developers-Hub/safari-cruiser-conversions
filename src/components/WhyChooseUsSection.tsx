@@ -43,12 +43,6 @@ const WhyChooseUsSection = () => {
     }
   ];
 
-  const achievements = [
-    { icon: Trophy, number: "500+", label: "Happy Clients" },
-    { icon: CheckCircle, number: "1000+", label: "Successful Conversions" },
-    { icon: Star, number: "98%", label: "Satisfaction Rate" },
-    { icon: Clock, number: "8+", label: "Years Experience" }
-  ];
 
   return (
     <section className="py-20 bg-muted/30" ref={ref}>
@@ -91,22 +85,6 @@ const WhyChooseUsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Achievements */}
-        <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          {achievements.map((achievement, index) => (
-            <div key={index} className="text-center p-6">
-              <achievement.icon className="w-12 h-12 mx-auto mb-4 text-safari-brown" />
-              <h3 className="text-3xl font-bold text-safari-brown mb-2">{achievement.number}</h3>
-              <p className="text-muted-foreground font-medium">{achievement.label}</p>
-            </div>
-          ))}
-        </motion.div>
 
         {/* Final CTA */}
         <motion.div
