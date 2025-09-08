@@ -235,6 +235,30 @@ const ContactSection: React.FC = () => {
             Get Your Free Quote
           </Button>
         </motion.div>
+
+        {/* Testimonials Section */}
+        <motion.div 
+          className="mt-16 py-12 bg-white rounded-2xl shadow-sm"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="container mx-auto px-4">
+            <h3 className="text-3xl font-bold text-safari-brown text-center mb-12">What Our Clients Say</h3>
+            
+            <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+              <div className="bg-safari-cream/30 p-8 rounded-xl shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="text-yellow-400 text-2xl">★★★★★</div>
+                </div>
+                <p className="text-safari-brown/90 mb-4 italic">
+                  "I've been working with PK Conversion for over 5 years now, and their attention to detail is unmatched. They transformed my Land Cruiser into the perfect safari vehicle that has withstood the toughest terrains of Masai Mara and Amboseli. Their craftsmanship and reliability make them the best in the business the payments plans are direct and transperant."
+                </p>
+                <p className="font-medium text-safari-brown">– Dickson Brightee Maasai, Safari Guide & Tour Director</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
