@@ -243,6 +243,11 @@ export const structuredData = {
     "logo": "https://pkconversions.co.ke/images/logo.png",
     "description": "Kenya's premier Land Cruiser conversion specialists specializing in safari vehicle modifications, 4x4 upgrades, and off-road expedition builds.",
     "foundingDate": "2017",
+    "founder": {
+      "@type": "Person",
+      "name": "Peter Gathaci Kamau",
+      "jobTitle": "Founder & Director"
+    },
     "numberOfEmployees": "10-20",
     "address": {
       "@type": "PostalAddress",
