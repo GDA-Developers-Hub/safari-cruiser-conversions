@@ -5,9 +5,9 @@ import {
   MapPin, 
   Clock, 
   MessageCircle, 
-  Facebook, 
   Mail
 } from "lucide-react";
+import { FaFacebookF, FaTiktok } from "react-icons/fa";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import MapComponent from "@/components/MapComponent";
@@ -22,6 +22,12 @@ const ContactSection = () => {
       title: "Call Us",
       details: ["+254 705 302615", "Available 6 days a week"],
       action: "tel:+254705302615"
+    },
+    {
+      icon: Mail,
+      title: "Email Us",
+      details: ["info@pkconversion.co.ke", "For inquiries and quotes"],
+      action: "mailto:info@pkconversion.co.ke"
     },
     {
       icon: MapPin,
@@ -97,22 +103,77 @@ const ContactSection = () => {
             ))}
           </div>
 
-          {/* Social Media & Actions */}
+          {/* Client Testimonial */}
+        <motion.div
+          className="mt-16 bg-white/5 p-8 rounded-2xl border border-safari-green/20"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-12 h-1 bg-safari-green mr-4"></div>
+              <h3 className="text-xl font-semibold text-safari-green">Client Testimonial</h3>
+              <div className="w-12 h-1 bg-safari-green ml-4"></div>
+            </div>
+            <blockquote className="text-center mb-6">
+              <p className="text-lg italic text-muted-foreground mb-4">
+                "I've been working with PK Conversion for over 5 years now, and their attention to detail is unmatched. 
+                They transformed my Land Cruiser into the perfect safari vehicle that has withstood the toughest terrains 
+                of Masai Mara and Amboseli. Their craftsmanship and reliability make them the best in the business."
+              </p>
+              <footer className="font-medium text-safari-green">
+                - Dickson Brightee Maasai,<br className="sm:hidden" /> 
+                <span className="text-foreground">Safari Guide & Tour Operator</span>
+              </footer>
+            </blockquote>
+          </div>
+        </motion.div>
+
+        {/* Philanthropic Work */}
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 1 }}
+        >
+          <h3 className="text-2xl font-bold mb-4 text-foreground">
+            <span className="text-safari-brown">Giving Back</span> to Our Community
+          </h3>
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            At PK Conversion, we believe in supporting our local community. We're proud to contribute to various 
+            conservation efforts and community development projects across Kenya, helping to preserve our beautiful 
+            country for future generations.
+          </p>
+        </motion.div>
+
+        <div className="my-16"></div> {/* Added space between sections */}
+
+        {/* Social Media & Actions */}
           <div className="text-center">
             <h4 className="text-xl font-semibold mb-6 text-foreground">Connect With Us</h4>
-            <div className="flex justify-center gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-8 w-full max-w-md mx-auto">
               <Button
                 size="sm"
                 variant="outline"
                 className="border-safari-brown text-safari-brown hover:bg-safari-brown hover:text-safari-cream"
                 onClick={() => window.open("https://www.facebook.com/peter.kamau.754/", "_blank")}
               >
-                <Facebook className="w-4 h-4 mr-2" />
+                <FaFacebookF className="w-4 h-4 mr-2" />
                 Facebook
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-safari-brown text-safari-brown hover:bg-safari-brown hover:text-safari-cream"
+                onClick={() => window.open("https://www.tiktok.com/@pkconversions", "_blank")}
+              >
+                <FaTiktok className="w-4 h-4 mr-2" />
+                TikTok
               </Button>
             </div>
             
-            <div className="grid sm:grid-cols-2 gap-4 max-w-md mx-auto">
+            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
               <Button
                 size="lg"
                 className="w-full bg-safari-brown hover:bg-safari-brown/90 text-safari-cream"
@@ -129,6 +190,15 @@ const ContactSection = () => {
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call +254 705 302615
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full border-safari-green text-safari-green hover:bg-safari-green hover:text-white"
+                onClick={() => window.open("mailto:info@pkconversion.co.ke")}
+              >
+                <Mail className="mr-2 w-5 h-5" />
+                Email Us
               </Button>
             </div>
           </div>

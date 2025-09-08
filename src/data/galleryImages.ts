@@ -1,4 +1,4 @@
-import heroSafari1 from "@/assets/hero-safari-1.jpeg";
+import zoteImage from "@/assets/Zote.jpeg";
 import heroWorkshop from "@/assets/hero-workshop.jpeg";
 import heroSafari2 from "@/assets/hero-safari-2.jpeg";
 import conversionBeforeAfter from "@/assets/conversion-before.jpeg";
@@ -41,7 +41,7 @@ const additionalImages = [
 
 const galleryImages = [
   {
-    src: heroSafari1,
+    src: zoteImage,
     title: "Safari Land Cruiser in Action",
     category: "Completed Conversions"
   },

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroSafari1 from "@/assets/hero-safari-1.jpeg";
+import zoteImage from "@/assets/Zote.jpeg";
 import heroWorkshop from "@/assets/hero-workshop.jpeg";
 import heroSafari2 from "@/assets/hero-safari-2.jpeg";
 import heroSafari3 from "@/assets/hero-safari-3.jpeg";
@@ -12,7 +12,7 @@ const HeroSlider = () => {
   
   const slides = [
     {
-      image: heroSafari1,
+      image: zoteImage,
       title: "PK CONVERSIONS",
       subtitle: "YOUR JOURNEY, YOUR VEHICLE, UNIQUELY CRAFTED"
     },

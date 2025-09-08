@@ -9,7 +9,15 @@ import {
   MapPin,
   Users,
   Gauge,
-  Image as ImageIcon
+  Image as ImageIcon,
+  BatteryFull,
+  CarFront,
+  ShieldCheck,
+  Package,
+  Snowflake,
+  Sofa,
+  PanelRight,
+  Sun
 } from "lucide-react";
 import detachableWindows from "@/assets/detachable windows frame.jpeg";
 import mahoganyFrame from "@/assets/fixed mahogany fitted canvas frame.jpeg";
@@ -65,9 +73,8 @@ const ServicesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const additionalServices = [
- 
-    
+  // Main Conversion Designs (previously in additional services)
+  const conversionDesigns = [
     { 
       icon: Settings,
       title: "Detachable Windows System",
@@ -100,6 +107,42 @@ const ServicesSection = () => {
     }
   ];
 
+  // Additional Services
+  const additionalServices = [
+    {
+      icon: Wrench,
+      title: "Modifications",
+      description: "Custom modifications to suit your specific needs and preferences"
+    },
+    {
+      icon: Shield,
+      title: "Restorations & Refurbishment",
+      description: "Complete restoration of vehicles to their former glory"
+    },
+    {
+      icon: ImageIcon,
+      title: "Repainting",
+      description: "Professional automotive painting with premium finishes"
+    },
+    {
+      icon: Wrench,
+      title: "Body Repairs",
+      description: "Expert bodywork and structural repairs"
+    }
+  ];
+
+  // Accessories
+  const accessories = [
+    { name: "Bull Bars", icon: ShieldCheck },
+    { name: "Roof Racks/Carriers", icon: Package },
+    { name: "Sump Guards", icon: Shield },
+    { name: "Tyre Racks", icon: CarFront },
+    { name: "Fridge Brackets", icon: Snowflake },
+    { name: "Seat Covers", icon: Sofa },
+    { name: "Side Steps", icon: PanelRight },
+    { name: "Spot Lights", icon: Sun }
+  ];
+
   return (
     <section id="services" className="py-20 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
@@ -118,19 +161,86 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
+        {/* Conversion Designs */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
+            Our <span className="text-safari-green">Conversion Designs</span>
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {conversionDesigns.map((service, index) => (
+              <ServiceCard key={`design-${index}`} service={service} index={index} isInView={isInView} />
+            ))}
+          </div>
+        </motion.div>
+
         {/* Additional Services */}
         <motion.div
-          className="mb-12"
+          className="mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
+            Our <span className="text-safari-green">Services</span>
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalServices.map((service, index) => (
+              <motion.div
+                key={`service-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.2 + (index * 0.1) }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              >
+                <Card className="h-full flex flex-col bg-gradient-to-b from-background to-muted/30 hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-safari-green/30">
+                  <CardContent className="p-6 flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-safari-green/10 rounded-full flex items-center justify-center mb-4">
+                      <service.icon className="w-8 h-8 text-safari-green" />
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-foreground">
+                      {service.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Accessories */}
+        <motion.div
+          className="mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Additional <span className="text-safari-green">Services</span>
+            Available <span className="text-safari-green">Accessories</span>
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {additionalServices.map((service, index) => (
-              <ServiceCard key={index} service={service} index={index} isInView={isInView} />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {accessories.map((item, index) => (
+              <motion.div
+                key={`accessory-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.2 + (index * 0.05) }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              >
+                <Card className="h-full flex flex-col items-center justify-center p-6 text-center hover:shadow-md transition-all duration-300 border border-border/50 hover:border-safari-green/30">
+                  <div className="w-12 h-12 bg-safari-green/10 rounded-full flex items-center justify-center mb-3">
+                    <item.icon className="w-5 h-5 text-safari-green" />
+                  </div>
+                  <h4 className="font-medium text-foreground">{item.name}</h4>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </motion.div>

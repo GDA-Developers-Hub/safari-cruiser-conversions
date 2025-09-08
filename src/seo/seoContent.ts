@@ -2,11 +2,11 @@
 
 // Advanced SEO Configuration
 export const seoConfig = {
-  siteName: "PK Conversions",
-  siteUrl: "https://pkconversions.co.ke",
+  siteName: "PK Conversion Ltd",
+  siteUrl: "https://pkconversion.co.ke",
   defaultImage: "/images/og-image.jpg",
-  twitterHandle: "@PKConversions",
-  facebookAppId: "123456789",
+  twitterHandle: "@PKConversionKE",
+  facebookAppId: "100063618587116",
   googleAnalyticsId: "G-XXXXXXXXXX",
   googleTagManagerId: "GTM-XXXXXXX",
   locale: "en_KE",
@@ -30,24 +30,24 @@ export const seoConfig = {
   openGraph: {
     type: "website",
     locale: "en_KE",
-    url: "https://pkconversions.co.ke",
-    siteName: "PK Conversions",
-    title: "PK Conversions | #1 Land Cruiser Conversion Experts in Kenya",
-    description: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi.",
+    url: "https://pkconversion.co.ke",
+    siteName: "PK Conversion Ltd",
+    title: "PK Conversion Ltd | #1 Land Cruiser Conversion Experts in Kenya | Nairobi",
+    description: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi. 10+ years experience. Call +254 705 302615 for a free consultation.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PK Conversions - Land Cruiser Conversion Experts",
+        alt: "PK Conversion Ltd - Land Cruiser Conversion Experts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@PKConversions",
-    creator: "@PKConversions",
-    title: "PK Conversions | #1 Land Cruiser Conversion Experts in Kenya",
+    site: "@PKConversionKE",
+    creator: "@PKConversionKE",
+    title: "PK Conversion Ltd | #1 Land Cruiser Conversion Experts in Kenya",
     description: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi.",
     images: ["/images/twitter-card.jpg"],
   },

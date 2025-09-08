@@ -10,10 +10,10 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: Award, number: "15+", label: "Years Experience" },
-    { icon: Users, number: "500+", label: "Satisfied Clients" },
-    { icon: Wrench, number: "1000+", label: "Conversions Done" },
-    { icon: MapPin, number: "100%", label: "Kenyan Expertise" }
+    { icon: Award, number: "10+", label: "Years Experience" },
+    { icon: Users, number: "200+", label: "Satisfied Clients" },
+    { icon: Wrench, number: "300+", label: "Conversions Done" },
+    { icon: MapPin, number: "100%", label: "Kenyan Craftsmanship" }
   ];
 
   return (
@@ -29,8 +29,8 @@ const AboutSection = () => {
             About <span className="text-safari-brown">PK Conversion</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Leading Kenya's safari vehicle conversion industry since 2008. We specialize in transforming 
-            Land Cruisers into premium safari vehicles for the tourism industry.
+            Leading Kenya's safari vehicle conversion industry since 2015. We specialize in transforming 
+            Land Cruisers into premium safari vehicles using only the highest quality materials and craftsmanship.
           </p>
         </motion.div>
 
@@ -45,14 +45,17 @@ const AboutSection = () => {
             </h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               At PK Conversion Ltd, we're passionate about creating exceptional safari experiences 
-              through expert vehicle modifications. Located on Eastern Bypass, Nairobi, we've been 
-              serving Kenya's tourism industry with premium Land Cruiser conversions that withstand 
-              the country's diverse terrain.
+              through expert vehicle modifications. Located on Eastern Bypass, Nairobi, we pride ourselves 
+              on using premium galvanized steel for our frames and bodies, ensuring superior rust resistance 
+              and longevity compared to standard black sheets used by competitors.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Our team of skilled mechanics and craftsmen understand the unique requirements of 
-              safari tourism. Every conversion is designed with safety, comfort, and durability 
-              in mind, ensuring unforgettable adventures across Kenya's national parks and reserves.
+              safari tourism. Each conversion features high-quality marine-grade upholstery, 
+              heavy-duty suspension systems, and custom-designed interiors. We use only premium 
+              automotive paints with UV protection to maintain their finish under the African sun. 
+              Our signature mahogany woodwork adds both elegance and durability to every vehicle, 
+              creating the perfect balance of comfort and functionality for Kenya's diverse terrain.
             </p>
           </motion.div>
 
@@ -84,9 +87,11 @@ const AboutSection = () => {
             Why Safari Operators Choose Us
           </h3>
           <p className="text-lg text-safari-gold mb-6 max-w-3xl mx-auto">
-            We understand Kenya's terrain like no other. Our conversions are built to handle everything 
-            from Maasai Mara's plains to Samburu's rocky landscapes, ensuring your guests experience 
-            the best of Kenya's wildlife in comfort and safety.
+            We understand Kenya's terrain like no other. Our conversions are built with reinforced chassis, 
+            heavy-duty suspension, and custom-designed interiors that can handle everything from Maasai Mara's 
+            plains to Samburu's rocky landscapes. Each vehicle is equipped with specially designed seating 
+            for optimal game viewing, ample storage for equipment, and proper ventilation systems to ensure 
+            your guests experience the best of Kenya's wildlife in comfort and safety.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-safari-cream">
             <span className="px-4 py-2 bg-white/20 rounded-full">Local Expertise</span>
