@@ -62,7 +62,7 @@ const Navigation = ({ dark = false }: NavigationProps) => {
               className="w-12 h-10 object-cover rounded-full shadow-sm border-2 border-safari-gold"
             />
             <div className="ml-3">
-              <h2 className={`font-bold text-lg ${isScrolled || dark ? 'text-foreground' : 'text-white'}`}>PK Conversion</h2>
+              <h2 className={`font-bold text-lg ${isScrolled || dark ? 'text-foreground' : 'text-white'}`}>PK Conversions</h2>
               <p className={`text-xs ${isScrolled || dark ? 'text-safari-gold' : 'text-white'}`}>Safari Specialists</p>
             </div>
           </div>

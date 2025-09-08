@@ -26,7 +26,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            About <span className="text-safari-green">PK Conversion</span>
+            About <span className="text-safari-green">PK Conversions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Leading Kenya's safari vehicle conversion industry since 2017. We specialize in transforming 
@@ -44,7 +44,7 @@ const AboutSection = () => {
               Our Mission
             </h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              At PK Conversion Ltd, we're passionate about creating exceptional safari experiences 
+              At PK Conversions Ltd, we're passionate about creating exceptional safari experiences 
               through expert vehicle modifications. Located on Eastern Bypass, Nairobi, we pride ourselves 
               on using premium galvanized steel for our frames and bodies, ensuring superior rust resistance 
               and longevity compared to standard black sheets used by competitors.

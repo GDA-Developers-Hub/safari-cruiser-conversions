@@ -20,7 +20,7 @@ const WelcomeSection = () => {
             <p className="text-xl text-gray-700 leading-relaxed">
               At PK Conversions, we transform vehicles into extraordinary assets. From custom van conversions to flawless body repairs and showroom-quality paint jobs, we combine technical precision with creative vision to bring your automotive dreams to life.
               <br /><br />
-              {/* <span className="font-semibold">Director Eng Peter K Gathaci</span> */}
+              <span className="font-semibold">Director Eng Peter K Gathaci</span>
             </p>
           </div>
         </div>

@@ -2,8 +2,8 @@
 
 // Advanced SEO Configuration
 export const seoConfig = {
-  siteName: "PK Conversion Ltd",
-  siteUrl: "https://pkconversion.co.ke",
+  siteName: "PK Conversions Ltd",
+  siteUrl: "https://pkconversions.co.ke",
   defaultImage: "/images/og-image.jpg",
   twitterHandle: "@PKConversionKE",
   facebookAppId: "100063618587116",
@@ -30,16 +30,16 @@ export const seoConfig = {
   openGraph: {
     type: "website",
     locale: "en_KE",
-    url: "https://pkconversion.co.ke",
-    siteName: "PK Conversion Ltd",
-    title: "PK Conversion Ltd | #1 Land Cruiser Conversion Experts in Kenya | Nairobi",
+    url: "https://pkconversions.co.ke",
+    siteName: "PK Conversions Ltd",
+    title: "PK Conversions Ltd | #1 Land Cruiser Conversion Experts in Kenya | Nairobi",
     description: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi. 8+ years experience. Call +254 705 302615 for a free consultation.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PK Conversion Ltd - Land Cruiser Conversion Experts",
+        alt: "PK Conversions Ltd - Land Cruiser Conversion Experts",
       },
     ],
     videos: [
@@ -56,7 +56,7 @@ export const seoConfig = {
     card: "summary_large_image",
     site: "@PKConversionKE",
     creator: "@PKConversionKE",
-    title: "PK Conversion Ltd | #1 Land Cruiser Conversion Experts in Kenya",
+    title: "PK Conversions Ltd | #1 Land Cruiser Conversion Experts in Kenya",
     description: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi.",
     images: ["/images/twitter-card.jpg"],
   },
@@ -64,12 +64,12 @@ export const seoConfig = {
 
 export const seoContent = {
   homepage: {
-    metaTitle: "PK Conversion Ltd | #1 Land Cruiser Conversion Experts in Kenya | Nairobi",
+    metaTitle: "PK Conversions Ltd | #1 Land Cruiser Conversion Experts in Kenya | Nairobi",
     metaDescription: "Kenya's most trusted Land Cruiser conversion specialists. Custom safari vehicles, off-road modifications & expert mechanical repairs in Nairobi. 15+ years experience. Call +254 705 302615 for a free consultation.",
     h1: "Premium Land Cruiser Conversions for Unforgettable African Safaris",
     h2: "Transform Your 4x4 into the Ultimate Safari Machine",
     content: `
-      <p>PK Conversion Ltd is East Africa's premier specialist in custom Land Cruiser conversions for safari and overland adventures. With over 15 years of hands-on experience, we transform standard vehicles into rugged, reliable safari machines that conquer Kenya's toughest terrains while ensuring comfort and safety.</p>
+      <p>PK Conversions Ltd is East Africa's premier specialist in custom Land Cruiser conversions for safari and overland adventures. With over 15 years of hands-on experience, we transform standard vehicles into rugged, reliable safari machines that conquer Kenya's toughest terrains while ensuring comfort and safety.</p>
       <p>Our team of certified craftsmen combines local expertise with precision engineering to deliver superior quality conversions that meet international standards. Whether you're a tour operator, safari company, or adventure enthusiast, we'll customize your vehicle to exceed expectations and handle the African wilderness with confidence.</p>
     `,
     keywords: [
@@ -204,10 +204,10 @@ export const seoContent = {
 export const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
-  "name": "PK Conversion Ltd",
-  "image": "https://pkconversion.co.ke/assets/pklogo.png",
-  "@id": "https://pkconversion.co.ke",
-  "url": "https://pkconversion.co.ke",
+  "name": "PK Conversions Ltd",
+  "image": "https://pkconversions.co.ke/assets/pklogo.png",
+  "@id": "https://pkconversions.co.ke",
+  "url": "https://pkconversions.co.ke",
   "telephone": "+254705302615",
   "priceRange": "$$",
   "address": {
@@ -252,24 +252,24 @@ export const structuredData = {
     "@type": "VideoObject",
     "name": "PK Conversions - Our Workshop and Process",
     "description": "A behind-the-scenes look at our Land Cruiser conversion process and workshop in Nairobi, Kenya.",
-    "thumbnailUrl": "https://pkconversion.co.ke/images/video-thumbnail.jpg",
+    "thumbnailUrl": "https://pkconversions.co.ke/images/video-thumbnail.jpg",
     "uploadDate": "2024-09-08T10:00:00+03:00",
     "duration": "PT5M30S",
     "contentUrl": "https://drive.google.com/file/d/1E8CYvzDOW7lsLrLNC6tsTTGSvKtlUrVY/view?usp=sharing",
     "embedUrl": "https://drive.google.com/file/d/1E8CYvzDOW7lsLrLNC6tsTTGSvKtlUrVY/preview",
     "publisher": {
       "@type": "Organization",
-      "name": "PK Conversion Ltd",
+      "name": "PK Conversions Ltd",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://pkconversion.co.ke/logo.png"
+        "url": "https://pkconversions.co.ke/logo.png"
       }
     }
   },
   organization: {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "PK Conversion Ltd",
+    "name": "PK Conversions Ltd",
     "missionStatement": "As a company rooted in innovation and trust, our mission is to transform everyday vehicles into world-class safari and utility machines, built to withstand the toughest terrains. At PK Conversions, we don't just modify vehicles – we create experiences.",
     "alternateName": "PK Conversions",
     "url": "https://pkconversions.co.ke",
@@ -307,7 +307,7 @@ export const structuredData = {
   localBusiness: {
     "@context": "https://schema.org",
     "@type": "AutomotiveRepairShop",
-    "name": "PK Conversion Ltd",
+    "name": "PK Conversions Ltd",
     "image": "https://pkconversions.co.ke/assests/workshop.jpeg",
     "description": "Professional Land Cruiser conversion and 4x4 modification services in Nairobi, Kenya.",
     "url": "https://pkconversions.co.ke",

@@ -252,7 +252,7 @@ const ContactSection: React.FC = () => {
                   <div className="text-yellow-400 text-2xl">★★★★★</div>
                 </div>
                 <p className="text-safari-brown/90 mb-4 italic">
-                  "I've been working with PK Conversion for over 5 years now, and their attention to detail is unmatched. They transformed my Land Cruiser into the perfect safari vehicle that has withstood the toughest terrains of Masai Mara and Amboseli. Their craftsmanship and reliability make them the best in the business the payments plans are direct and transperant."
+                  "I've been working with PK Conversions for over 5 years now, and their attention to detail is unmatched. They transformed my Land Cruiser into the perfect safari vehicle that has withstood the toughest terrains of Masai Mara and Amboseli. Their craftsmanship and reliability make them the best in the business the payments plans are direct and transperant."
                 </p>
                 <p className="font-medium text-safari-brown">– Dickson Brightee Maasai, Safari Guide & Tour Director</p>
               </div>

@@ -173,7 +173,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <div className="text-safari-cream/60 text-sm text-center md:text-left">
-            <p>&copy; 2024 PK Conversion Ltd. All rights reserved.</p>
+            <p>&copy; 2025 PK Conversion Ltd. All rights reserved.</p>
             <p className="mt-1">
               Transforming vehicles, creating adventures across Kenya.
             </p>

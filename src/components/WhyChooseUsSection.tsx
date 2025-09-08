@@ -97,12 +97,12 @@ const WhyChooseUsSection = () => {
             Ready to Join Our Success Stories?
           </h3>
           <p className="text-lg text-safari-gold mb-8 max-w-2xl mx-auto">
-            Experience the PK Conversion difference. Let us transform your Land Cruiser 
+            Experience the PK Conversions difference. Let us transform your Land Cruiser 
             into the ultimate safari vehicle that your guests will never forget.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-safari-cream">
             <span className="px-6 py-2 bg-white/20 rounded-full">8+ Years Proven Track Record</span>
-            <span className="px-6 py-2 bg-white/20 rounded-full">500+ Satisfied Clients</span>
+            <span className="px-6 py-2 bg-white/20 rounded-full">200+ Satisfied Clients</span>
             <span className="px-6 py-2 bg-white/20 rounded-full">Quality Guaranteed</span>
           </div>
         </motion.div>
