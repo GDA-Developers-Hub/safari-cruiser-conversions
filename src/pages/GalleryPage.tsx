@@ -233,7 +233,7 @@ const GalleryPage = () => {
               Back to Home
             </button>
             <h1 className="text-4xl font-bold text-foreground">
-              Our <span className="text-safari-brown">Gallery</span>
+              Our <span className="text-safari-green">Gallery</span>
             </h1>
             <div className="w-24"></div> {/* For alignment */}
           </div>
@@ -273,7 +273,7 @@ const GalleryPage = () => {
           <div className="mt-20">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-foreground mb-4">
-                Our <span className="text-safari-brown">Videos</span>
+                Our <span className="text-safari-green">Videos</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Watch our skilled craftsmen in action as they transform vehicles into exceptional safari cruisers
@@ -301,8 +301,8 @@ const GalleryPage = () => {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                   </div>
                   
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Overlay - Hidden on mobile to prevent text overlap issues */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
                     <div className="absolute bottom-4 left-4 right-4">
                       <p className="text-xs text-safari-gold font-medium mb-1">
                         {video.category}

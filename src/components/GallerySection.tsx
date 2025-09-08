@@ -52,7 +52,7 @@ const GallerySection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Our <span className="text-safari-brown">Work Gallery</span>
+            Our <span className="text-safari-green">Work Gallery</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Explore our portfolio of premium safari vehicle conversions and see the 
@@ -141,8 +141,8 @@ const GallerySection = () => {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                 </div>
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* Overlay - Hidden on mobile to prevent text overlap issues */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
                   <div className="absolute bottom-4 left-4 right-4">
                     <p className="text-xs text-safari-gold font-medium mb-1">
                       {video.category}

@@ -26,10 +26,10 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            About <span className="text-safari-brown">PK Conversion</span>
+            About <span className="text-safari-green">PK Conversion</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Leading Kenya's safari vehicle conversion industry since 2015. We specialize in transforming 
+            Leading Kenya's safari vehicle conversion industry since 2017. We specialize in transforming 
             Land Cruisers into premium safari vehicles using only the highest quality materials and craftsmanship.
           </p>
         </motion.div>

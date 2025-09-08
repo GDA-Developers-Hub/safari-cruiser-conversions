@@ -153,7 +153,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Our <span className="text-safari-brown">Comprehensive Services</span>
+            Our <span className="text-safari-green">Comprehensive Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Specializing in Land Cruiser conversions and modifications for the African terrain, 

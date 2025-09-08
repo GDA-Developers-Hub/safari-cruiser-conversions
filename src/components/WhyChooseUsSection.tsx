@@ -54,7 +54,7 @@ const WhyChooseUsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Why Safari Operators <span className="text-safari-brown">Choose Us</span>
+            Why Safari Operators <span className="text-safari-green">Choose Us</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We've earned the trust of Kenya's leading safari operators through consistent 
@@ -102,7 +102,7 @@ const WhyChooseUsSection = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-safari-cream">
             <span className="px-6 py-2 bg-white/20 rounded-full">8+ Years Proven Track Record</span>
-            <span className="px-6 py-2 bg-white/20 rounded-full">200+ Satisfied Clients</span>
+            <span className="px-6 py-2 bg-white/20 rounded-full">500+ Satisfied Clients</span>
             <span className="px-6 py-2 bg-white/20 rounded-full">Quality Guaranteed</span>
           </div>
         </motion.div>
