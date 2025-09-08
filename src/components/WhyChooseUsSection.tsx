@@ -102,7 +102,7 @@ const WhyChooseUsSection = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-safari-cream">
             <span className="px-6 py-2 bg-white/20 rounded-full">8+ Years Proven Track Record</span>
-            <span className="px-6 py-2 bg-white/20 rounded-full">500+ Satisfied Clients</span>
+            <span className="px-6 py-2 bg-white/20 rounded-full">200+ Satisfied Clients</span>
             <span className="px-6 py-2 bg-white/20 rounded-full">Quality Guaranteed</span>
           </div>
         </motion.div>
