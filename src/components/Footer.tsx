@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
             <p className="text-safari-cream/80 text-sm leading-relaxed mb-4">
               Kenya's premier safari vehicle conversion specialists. Transforming 
-              Land Cruisers into exceptional safari experiences since 2008.
+              Land Cruisers into exceptional safari experiences since 2017.
             </p>
             <div className="flex gap-3">
               <button

@@ -20,7 +20,7 @@ const WhyChooseUsSection = () => {
     {
       icon: Shield,
       title: "Quality Craftsmanship",
-      description: "Over 10 years of expertise in safari vehicle modifications with attention to every detail.",
+      description: "Over 8 years of expertise in safari vehicle modifications with attention to every detail.",
       color: "text-safari-brown"
     },
     {
@@ -47,7 +47,7 @@ const WhyChooseUsSection = () => {
     { icon: Trophy, number: "500+", label: "Happy Clients" },
     { icon: CheckCircle, number: "1000+", label: "Successful Conversions" },
     { icon: Star, number: "98%", label: "Satisfaction Rate" },
-    { icon: Clock, number: "10+", label: "Years Experience" }
+    { icon: Clock, number: "8+", label: "Years Experience" }
   ];
 
   return (
@@ -123,7 +123,7 @@ const WhyChooseUsSection = () => {
             into the ultimate safari vehicle that your guests will never forget.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-safari-cream">
-            <span className="px-6 py-2 bg-white/20 rounded-full">10+ Years Proven Track Record</span>
+            <span className="px-6 py-2 bg-white/20 rounded-full">8+ Years Proven Track Record</span>
             <span className="px-6 py-2 bg-white/20 rounded-full">500+ Satisfied Clients</span>
             <span className="px-6 py-2 bg-white/20 rounded-full">Quality Guaranteed</span>
           </div>

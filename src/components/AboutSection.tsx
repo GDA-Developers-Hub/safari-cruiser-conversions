@@ -10,7 +10,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: Award, number: "10+", label: "Years Experience" },
+    { icon: Award, number: "8+", label: "Years Experience" },
     { icon: Users, number: "200+", label: "Satisfied Clients" },
     { icon: Wrench, number: "300+", label: "Conversions Done" },
     { icon: MapPin, number: "100%", label: "Kenyan Craftsmanship" }

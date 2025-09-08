@@ -115,7 +115,7 @@ const MapComponent = ({
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-safari-brown" />
-          Find Us on Eastern Bypass
+          Find Us on Ruai Eastern By-pass St Joseph stage
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -177,13 +177,8 @@ const MapComponent = ({
             </div>
             
             <div className="p-4 bg-muted/50 rounded-lg">
-              <p className="text-sm text-muted-foreground mb-2">
-                <strong>Easy to Find:</strong> Located on the busy Mombasa Road, 
-                one of Nairobi's main arterial roads.
-              </p>
               <p className="text-sm text-muted-foreground">
-                <strong>Landmark:</strong> Near major automotive businesses and 
-                industrial areas for easy access.
+                <strong>Landmark:</strong> Ruai Eastern By-pass, St Joseph stage
               </p>
             </div>
           </div>

@@ -106,27 +106,6 @@ const GallerySection = () => {
           </button>
         </div>
 
-        {/* Stats */}
-        <motion.div
-          className="grid sm:grid-cols-3 gap-8 text-center"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <div className="p-6">
-            <h3 className="text-4xl font-bold text-safari-brown mb-2">1000+</h3>
-            <p className="text-muted-foreground font-medium">Vehicles Converted</p>
-          </div>
-          <div className="p-6">
-            <h3 className="text-4xl font-bold text-safari-green mb-2">98%</h3>
-            <p className="text-muted-foreground font-medium">Customer Satisfaction</p>
-          </div>
-          <div className="p-6">
-            <h3 className="text-4xl font-bold text-safari-gold mb-2">15+</h3>
-            <p className="text-muted-foreground font-medium">Years Experience</p>
-          </div>
-        </motion.div>
-
         {/* Videos Section */}
         <motion.div 
           className="mt-24"
