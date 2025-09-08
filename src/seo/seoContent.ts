@@ -238,6 +238,7 @@ export const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "PK Conversion Ltd",
+    "missionStatement": "As a company rooted in innovation and trust, our mission is to transform everyday vehicles into world-class safari and utility machines, built to withstand the toughest terrains. At PK Conversions, we don't just modify vehicles – we create experiences.",
     "alternateName": "PK Conversions",
     "url": "https://pkconversions.co.ke",
     "logo": "https://pkconversions.co.ke/images/logo.png",
