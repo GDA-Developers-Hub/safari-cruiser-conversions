@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import galleryImages from "@/data/galleryImages";
 
 // Import videos from assets
-import video1 from "@/assets/vedio1.mp4";
-import video2 from "@/assets/video3.mp4";
+import video1 from "@/assets/video 1.mp4";
+import video2 from "@/assets/video2.mp4";
 import video3 from "@/assets/video3.mp4";
 import video4 from "@/assets/video4.mp4";
 
@@ -24,6 +24,18 @@ const previewVideos = [
     title: "Vehicle Transformation",
     category: "Conversion Process",
     description: "See the complete before and after transformation process"
+  },
+  {
+    src: video3,
+    title: "Safari Adventure",
+    category: "Client Success",
+    description: "Our converted vehicles in action on safari adventures"
+  },
+  {
+    src: video4 ,
+    title: "Custom Fabrication",
+    category: "Craftsmanship",
+    description: "Detailed look at our custom fabrication process"
   }
 ];
 

@@ -39,7 +39,11 @@ import video1 from "@/assets/vedio1.mp4";
 import video2 from "@/assets/video2.mp4";
 import video3 from "@/assets/video3.mp4";
 import video4 from "@/assets/video4.mp4";
-
+import video5 from "@/assets/video5.mp4";
+import video6 from "@/assets/video6.mp4";
+import video7 from "@/assets/video7.mp4";
+import video8 from "@/assets/video8.mp4";
+import video9 from "@/assets/video9.mp4";
 
 // Define the gallery images with local imports
 const galleryImages = [
@@ -204,8 +208,38 @@ const galleryVideos = [
   {
     src: video4,
     title: "Custom Fabrication",
-    category: "Custom Work",
-    description: "Detailed look at our custom fabrication and bodywork process"
+    category: "Craftsmanship",
+    description: "Detailed look at our custom fabrication process"
+  },
+  {
+    src: video5,
+    title: "Interior Customization",
+    category: "Luxury Features",
+    description: "See how we create luxurious and functional interiors"
+  },
+  {
+    src: video6,
+    title: "Off-Road Testing",
+    category: "Quality Assurance",
+    description: "Rigorous testing to ensure top performance in all conditions"
+  },
+  {
+    src: video7,
+    title: "Client Delivery",
+    category: "Customer Experience",
+    description: "The exciting moment when clients receive their custom vehicles"
+  },
+  {
+    src: video8,
+    title: "Safari Expedition",
+    category: "Adventure",
+    description: "Our vehicles in action during real safari expeditions"
+  },
+  {
+    src: video9,
+    title: "Behind the Build",
+    category: "Making Of",
+    description: "Exclusive look at what goes into building each custom vehicle"
   }
 ];
 

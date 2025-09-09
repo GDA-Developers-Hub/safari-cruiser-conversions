@@ -1,5 +1,5 @@
 import React from 'react';
-import WelcomeImage from '@/assets/Mtu.jpeg';
+import WelcomeImage from '@/assets/hero-safari-2.jpeg';
 
 const WelcomeSection = () => {
   return (
