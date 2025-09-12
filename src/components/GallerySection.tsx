@@ -1,12 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { X, ZoomIn, ArrowRight, Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import galleryImages from "@/data/galleryImages";
+import { VIDEO_CONFIG, optimizeVideoLoading, handleVideoError } from "@/utils/videoUtils";
+import VideoPlayer from "@/components/VideoPlayer";
 
 // Import videos from assets
-import video1 from "@/assets/video 1.mp4";
+import video1 from "@/assets/vedio1.mp4";
 import video2 from "@/assets/video2.mp4";
 import video3 from "@/assets/video3.mp4";
 import video4 from "@/assets/video4.mp4";
@@ -235,14 +237,11 @@ const GallerySection = () => {
           >
             <div className="bg-white rounded-lg overflow-hidden">
               <div className="aspect-video">
-                <video
+                <VideoPlayer
                   src={selectedVideo.src}
-                  controls
+                  title={selectedVideo.title}
                   className="w-full h-full object-cover"
-                  poster=""
-                >
-                  Your browser does not support the video tag.
-                </video>
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-foreground mb-2">
